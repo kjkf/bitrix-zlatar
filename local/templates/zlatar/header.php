@@ -22,6 +22,18 @@ use Bitrix\Main\Page\Asset;
 </head>
 <body>
 <?$APPLICATION->ShowPanel(); ?>
+<?
+$curpage = $APPLICATION->GetCurPage(false);
+if ($curpage == SITE_DIR)
+    $menuType = '';
+else if($curpage == SITE_DIR.'leaders/' || $curpage == SITE_DIR.'subdivision/' ||
+        $curpage == SITE_DIR.'products/small_forms/' || $curpage == SITE_DIR.'products/suspended-facades/' || $curpage == SITE_DIR.'products/others/' ||
+        $curpage == SITE_DIR.'contacts/')
+    $menuType = 'm-collapsed"';
+else
+    $menuType = 'm-sm';
+
+?>
 <div class="container">
     <header class="header">
         <div class="contacts header__contacts">
@@ -57,9 +69,9 @@ use Bitrix\Main\Page\Asset;
                 </a>
             </div>
         </div>
-        <div class="left-side">
+        <div class="left-side <?=$menuType?>">
             <div class="logo">
-                <a href="#" class="logo__link"><img src="<?=SITE_TEMPLATE_PATH?>/public/images/content/ZR_Logo.svg" alt="ЗЛАТАРЬ" class="logo__img"></a>
+                <a href="/" class="logo__link"><img src="<?=SITE_TEMPLATE_PATH?>/public/images/content/ZR_Logo.svg" alt="ЗЛАТАРЬ" class="logo__img"></a>
             </div>
             <div class="nav-wrap">
                 <?$APPLICATION->IncludeComponent("bitrix:menu", "menu", Array(
