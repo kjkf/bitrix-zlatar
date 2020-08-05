@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Листогиб";
+$arDirProperties = Array(
+
+);
+?>
