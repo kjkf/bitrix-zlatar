@@ -13,7 +13,7 @@
         <p>Мы заинтересованы в создании и поддержании взаимовыгодных партнерских отношений.</p>
     </div>
     <div class="content__footer">
-        <a href="#" class="link">Руководители</a>
+        <a href="#" class="link show-modal">Руководители</a>
         <a href="#" class="link">Ключевые <br>подразделения</a>
     </div>
 
