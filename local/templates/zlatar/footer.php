@@ -29,8 +29,11 @@
 <div class="modal modal-order">
     <div class="modal__in">
         <?$APPLICATION->IncludeComponent("bitrix:main.feedback", "feedback", Array(
+            "COMPONENT_TEMPLATE" => ".default",
             "EMAIL_TO" => "yakjkf@gmail.com",	// E-mail, на который будет отправлено письмо
-            "EVENT_MESSAGE_ID" => "",	// Почтовые шаблоны для отправки письма
+            "EVENT_MESSAGE_ID" => array(
+                    0 => "7",
+            ),	// Почтовые шаблоны для отправки письма
             "OK_TEXT" => "Спасибо, ваше сообщение принято.",	// Сообщение, выводимое пользователю после отправки
             "REQUIRED_FIELDS" => array(	// Обязательные поля для заполнения
                 0 => "NAME",
